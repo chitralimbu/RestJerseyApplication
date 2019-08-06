@@ -1,0 +1,4 @@
+com\rest\UserDao.class
+com\rest\User.class
+com\rest\UserService.class
+com\rest\UserServiceJson.class
