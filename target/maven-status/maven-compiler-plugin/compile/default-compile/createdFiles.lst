@@ -1,4 +1,7 @@
-com\rest\UserDao.class
-com\rest\User.class
-com\rest\UserService.class
-com\rest\UserServiceJson.class
+com/rest/UserServiceJson.class
+com/rest/UserDao.class
+com/rest/SecureService.class
+com/rest/SecurityFilter.class
+com/rest/UserService.class
+com/rest/User.class
+com/http/request/HttpRequests.class

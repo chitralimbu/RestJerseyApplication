@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class UserDao {
 	List<User> users = setup();
 	
-	public static final String RESOURCE = "C:\\Users\\1518563\\Desktop\\REST-DATA\\users.csv";
+	public static final String RESOURCE = "/home/dharanboi/Documents/RestData/users.csv";
 	
 	private List<User> setup() {
 		

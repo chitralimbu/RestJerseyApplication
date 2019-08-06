@@ -15,7 +15,7 @@ import com.rest.User;
 public class HttpRequests {
 	
 	public static void getRequest() throws IOException {
-		URL getRequest = new URL("http://localhost:8080/RestTest/rest/UserService/json/all");
+		URL getRequest = new URL("http://localhost:8080/RestJerseyExample/rest/UserService/json/all");
 		String readLine = null;
 		HttpURLConnection connection = (HttpURLConnection) getRequest.openConnection();
 		connection.setRequestMethod("GET");
@@ -59,7 +59,7 @@ public class HttpRequests {
 	
 	public static void main(String[] args) throws IOException {
 		//getRequest();
-		postRequset();
+		//postRequset();
 		getRequest();
 	}
 }
