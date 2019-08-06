@@ -14,20 +14,21 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/UserService/json")
+@Produces(MediaType.APPLICATION_JSON)
 public class UserServiceJson {
 	
 	UserDao userDao = new UserDao();
 	
 	@Path("/all")
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+	
 	public List<User> getUsersJson(){
 		return userDao.getAllUsers();
 	}
 	
 	@Path("/{name}")
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+	
 	public User getUser(@PathParam("name") String name) {
 		return userDao.getUserByName(name);
 	}
@@ -35,7 +36,6 @@ public class UserServiceJson {
 	@POST
 	@Path("/add/users")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
 	public Response createUser(User user) {
 		return Response.status(201).entity(userDao.addUser(user)).build();
 	}
@@ -43,7 +43,6 @@ public class UserServiceJson {
 	@PUT  
 	@Path("/update/users")  
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
 	public Response updateUser(User user) {
 		return Response.status(200).entity(userDao.updateUser(user)).build();
 	}
@@ -51,7 +50,6 @@ public class UserServiceJson {
 	@DELETE
 	@Path("delete/users/{userId}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
 	public Response deleteUser(@PathParam("userId") int id) {
 		return Response.status(200).entity(userDao.deleteUser(id)).build();
 	}
